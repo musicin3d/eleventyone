@@ -18,10 +18,10 @@
           </li>
         </ul>
         <h1>{{ title }}</h1>
-        {%- if subtitle %}<p class="subtitle">{{ subtitle }}</p>{% endif %}
+        {{#if subtitle }}<p class="subtitle">{{ subtitle }}</p>{{/if}}
       </header>
-      {{ content | safe }}
-      {% include "footer.njk" %}
+      {{{ content }}}
+      {{> footer }}
     </div>
   </body>
 </html>

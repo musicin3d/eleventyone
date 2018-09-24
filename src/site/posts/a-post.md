@@ -13,7 +13,7 @@ It looks like this:
 {
   "layout" : "layouts/post.md",
   "tags" : "post",
-  "templateEngineOverride": "njk,md"
+  "templateEngineOverride": "hbs,md"
 }
 ```
 

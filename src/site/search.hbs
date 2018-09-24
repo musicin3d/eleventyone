@@ -1,0 +1,12 @@
+---
+permalink: search.json
+---
+[
+    {{#each collections.post }}
+        {
+            "url": "{{ this.url }}",
+            "title": "{{ this.data.title }}",
+            "index": "{{ squash this.templateContent }}"
+        } {{#unless @last }},{{/unless}}
+    {{/each}}
+]

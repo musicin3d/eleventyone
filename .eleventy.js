@@ -1,19 +1,30 @@
-module.exports = function(config) {
+var fs = require('fs')
+var path = require('path')
 
-  // Add a date formatter filter to Nunjucks
-  config.addFilter("dateDisplay", require("./filters/dates.js") );
-  config.addFilter("timestamp", require("./filters/timestamp.js") );
-  config.addFilter("squash", require("./filters/squash.js") );
 
-  return {
-    dir: {
-      input: "src/site",
-      output: "dist",
-      includes: "_includes"
-    },
-    templateFormats : ["njk", "md"],
-    htmlTemplateEngine : "njk",
-    markdownTemplateEngine : "njk"
-  };
+var filterPath = './filters/'
+
+
+module.exports = function (config) {
+
+    // Add a date formatter filter to Nunjucks
+    var files = fs.readdirSync(filterPath)
+    console.log(files)
+    files.forEach(function(file){
+        var name = path.basename(file, '.js')
+        var filepath = filterPath + file
+        config.addFilter(name, require(filepath));
+    })
+
+    return {
+        dir: {
+            input: "src/site",
+            output: "dist",
+            includes: "_includes"
+        },
+        templateFormats: ["hbs", "md"],
+        htmlTemplateEngine: "hbs",
+        markdownTemplateEngine: "hbs"
+    };
 
 };
