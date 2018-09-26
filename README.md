@@ -1,6 +1,6 @@
 # EleventyOne
 
-Phil's first port of call when starting another project using Eleventy.
+Based on Phil's first port of call when starting another project using Eleventy.
 
 This project scaffold includes:
 
@@ -14,6 +14,10 @@ This project scaffold includes:
 ## Instructions
 
 To get your own instance of this 11ty starter project cloned and deploying to Netlify very quickly, just click the button below and follow the instructions.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/musicin3d/eleventyone)
+
+Although, I recommend others use the original project with this button...
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/eleventyone)
 
